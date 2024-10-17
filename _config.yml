@@ -8,7 +8,8 @@ subtitle: '分享我搭建个人博客网站的过程'
 description: ''
 keywords:
 author: 栀子花
-language: en
+language: 
+  - zh-CN 
 timezone: ''
 
 # URL
