@@ -8,8 +8,8 @@ subtitle: '分享我搭建个人博客网站的过程'
 description: ''
 keywords:
 author: 栀子花
-language: zh-CN
-timezone: '+08:00'
+language: en
+timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
