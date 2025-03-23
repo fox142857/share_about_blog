@@ -8,195 +8,10 @@ tags:
 
 - #### 在项目根目录下创建`pom.xml`文件，配置项目依赖及打包插件（例如`maven-jar-plugin`）
 
-~~~xml
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-
-  <groupId>com.outboundmanagement</groupId>
-  <artifactId>outboundmanagement</artifactId>
-  <version>1.0-SNAPSHOT</version>
-  <name>outboundmanagement</name>
-
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <junit.version>5.11.3</junit.version>
-    <mybatis.version>3.5.11</mybatis.version>
-    <mysql.version>8.0.33</mysql.version>
-    <!-- 指定 Lombok 的固定版本 -->
-    <lombok.version>1.18.26</lombok.version>
-    <javafx.version>17.0.14</javafx.version>
-  </properties>
-
-  <dependencies>
-    <dependency>
-      <groupId>org.openjfx</groupId>
-      <artifactId>javafx-controls</artifactId>
-      <version>${javafx.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.openjfx</groupId>
-      <artifactId>javafx-fxml</artifactId>
-      <version>${javafx.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>cn.hutool</groupId>
-      <artifactId>hutool-all</artifactId>
-      <version>5.8.24</version>
-    </dependency>
-    <dependency>
-      <groupId>org.junit.jupiter</groupId>
-      <artifactId>junit-jupiter-api</artifactId>
-      <version>${junit.version}</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.junit.jupiter</groupId>
-      <artifactId>junit-jupiter-engine</artifactId>
-      <version>${junit.version}</version>
-      <scope>test</scope>
-    </dependency>
-    <!-- start to add other framework -->
-    <dependency>
-      <groupId>org.slf4j</groupId>
-      <artifactId>slf4j-api</artifactId>
-      <version>2.0.6</version>
-    </dependency>
-    <!-- Logback -->
-    <dependency>
-      <groupId>ch.qos.logback</groupId>
-      <artifactId>logback-classic</artifactId>
-      <version>1.4.12</version>
-    </dependency>
-    <dependency>
-      <groupId>ch.qos.logback</groupId>
-      <artifactId>logback-core</artifactId>
-      <version>1.4.14</version>
-    </dependency>
-    <!-- 使用固定版本的 Lombok -->
-    <dependency>
-      <groupId>org.projectlombok</groupId>
-      <artifactId>lombok</artifactId>
-      <version>${lombok.version}</version>
-      <scope>compile</scope>
-    </dependency>
-    <!-- start to add mybatis framework -->
-    <dependency>
-      <groupId>org.mybatis</groupId>
-      <artifactId>mybatis</artifactId>
-      <version>${mybatis.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.mybatis.generator</groupId>
-      <artifactId>mybatis-generator-core</artifactId>
-      <version>1.4.1</version>
-    </dependency>
-    <!-- 修改 MySQL 连接器坐标 -->
-    <dependency>
-      <groupId>com.mysql</groupId>
-      <artifactId>mysql-connector-j</artifactId>
-      <version>${mysql.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-context</artifactId>
-      <version>5.3.23</version>
-    </dependency>
-    <!-- Google Guava 库 -->
-    <dependency>
-      <groupId>com.google.guava</groupId>
-      <artifactId>guava</artifactId>
-      <version>32.0.1-jre</version>
-    </dependency>
-  </dependencies>
-
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.11.0</version>
-        <configuration>
-          <source>17</source>
-          <target>17</target>
-        </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.openjfx</groupId>
-        <artifactId>javafx-maven-plugin</artifactId>
-        <version>0.0.8</version>
-        <executions>
-          <execution>
-            <!-- Default configuration for running with: mvn clean javafx:run -->
-            <id>default-cli</id>
-            <configuration>
-              <mainClass>com.outboundmanagement.OutboundManagementApplication</mainClass>
-              <launcher>app</launcher>
-              <jlinkZipName>app</jlinkZipName>
-              <jlinkImageName>app</jlinkImageName>
-              <noManPages>true</noManPages>
-              <stripDebug>true</stripDebug>
-              <noHeaderFiles>true</noHeaderFiles>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-
-      <!-- MyBatis Generator Maven插件 -->
-      <plugin>
-        <groupId>org.mybatis.generator</groupId>
-        <artifactId>mybatis-generator-maven-plugin</artifactId>
-        <version>1.4.1</version>
-        <configuration>
-          <configurationFile>src/main/resources/mybatis-generator-config.xml</configurationFile>
-          <verbose>true</verbose>
-          <overwrite>true</overwrite>
-        </configuration>
-        <dependencies>
-          <!-- 修改 MySQL 连接器坐标 -->
-          <dependency>
-            <groupId>com.mysql</groupId>
-            <artifactId>mysql-connector-j</artifactId>
-            <version>${mysql.version}</version>
-          </dependency>
-        </dependencies>
-      </plugin>
-
-      <!-- maven-assembly-plugin打包插件 -->
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-assembly-plugin</artifactId>
-        <version>3.4.0</version>
-        <executions>
-          <execution>
-            <id>make-assembly</id>
-            <phase>package</phase>
-            <goals>
-              <goal>single</goal>
-            </goals>
-            <configuration>
-              <descriptorRefs>
-                <descriptorRef>jar-with-dependencies</descriptorRef>
-              </descriptorRefs>
-              <archive>
-                <manifest>
-                  <mainClass>com.outboundmanagement.OutboundManagementApplication</mainClass>
-                </manifest>
-              </archive>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-    </plugins>
-  </build>
-</project>
-~~~
 
 - #### 根据图片指引进行项目构建
 
-<img src="https://s2.loli.net/2025/03/23/DfCT9q3tziaAlkp.png" alt="packaging-java-project-workflow-01.png" style="width:50%; height:50%;">
+<img src="https://s2.loli.net/2025/03/23/DfCT9q3tziaAlkp.png" alt="packaging-java-project-workflow-01.png" style="width:100%; height:100%;">
 
 ---
 
@@ -216,7 +31,7 @@ tags:
   - 如果你使用了带依赖打包（jar-with-dependencies），一个 JAR 文件中通常包含了所有运行所需的类库，这种情况下只需要一个 JAR 文件。
   - 如果你采用了独立 JAR 的方式，那么除了主 JAR，还需要将依赖的 JAR 文件也放入目录中。
 
-<img src="https://s2.loli.net/2025/03/23/GeZ6fX4wFAYazlc.png" alt="packaging-java-project-workflow-02.png" style="width:50%; height:50%;">
+<img src="https://s2.loli.net/2025/03/23/GeZ6fX4wFAYazlc.png" alt="packaging-java-project-workflow-02.png" style="width:100%; height:100%;">
 
 ---
 
@@ -243,7 +58,7 @@ tags:
   - `dist` 文件夹，内含你的 JAR 文件
   - `jre17` 文件夹，内含完整的 `JRE` 和 `javafx-jmods`
 
-<img src="https://s2.loli.net/2025/03/23/EeQ1KGmFJjC92np.png" alt="packaging-java-project-workflow-03.png" style="width:50%; height:50%;">
+<img src="https://s2.loli.net/2025/03/23/EeQ1KGmFJjC92np.png" alt="packaging-java-project-workflow-03.png" style="width:100%; height:100%;">
 
 ---
 
@@ -281,8 +96,8 @@ tags:
   & "H:\Code\obm.exe\output\jre17\jdk-17\bin\jlink" --% --module-path "H:\Code\obm.exe\output\jre17\jdk-17\jmods;H:\Code\obm.exe\output\jre17\javafx-jmods-17.0.14" --add-modules java.base,java.logging,java.xml,java.naming,java.sql,java.desktop,java.management,javafx.controls,javafx.fxml --output "H:\Code\obm.exe\output\jre-custom"
   ~~~
 
-<img src="https://s2.loli.net/2025/03/23/C3TBXGaSkJeOH5D.png" alt="packaging-java-project-workflow-04.png" style="width:50%; height:50%;">
-<img src="https://s2.loli.net/2025/03/23/4Xx8UlMZf1D6Br5.png" alt="packaging-java-project-workflow-05.png" style="width:50%; height:50%;">
+<img src="https://s2.loli.net/2025/03/23/C3TBXGaSkJeOH5D.png" alt="packaging-java-project-workflow-04.png" style="width:100%; height:100%;">
+<img src="https://s2.loli.net/2025/03/23/4Xx8UlMZf1D6Br5.png" alt="packaging-java-project-workflow-05.png" style="width:100%; height:100%;">
 
 ---
 
@@ -306,13 +121,13 @@ tags:
 
   这里要勾选"Don't wrap the jar, launch only"
 
-<img src="https://s2.loli.net/2025/03/23/MLHCqDhipwEcNWS.png" alt="packaging-java-project-workflow-06.png" style="width:50%; height:50%;">
+<img src="https://s2.loli.net/2025/03/23/MLHCqDhipwEcNWS.png" alt="packaging-java-project-workflow-06.png" style="width:100%; height:100%;">
 
 - #### 设置主类
 
   在“Header”选项卡中，确保“Main class”字段填写了你的应用主类全限定名
 
-<img src="https://s2.loli.net/2025/03/23/ydnfgBToCucSiFm.png" alt="packaging-java-project-workflow-07.png" style="width:50%; height:50%;">
+<img src="https://s2.loli.net/2025/03/23/ydnfgBToCucSiFm.png" alt="packaging-java-project-workflow-07.png" style="width:100%; height:100%;">
 
 - #### 配置 JRE 参数
 
@@ -321,17 +136,17 @@ tags:
   - **Min JRE version**：填写 `17`（与你的应用编译版本对应）。
   - **JRE paths**：指定生成的自定义运行时镜像路径。
 
-<img src="https://s2.loli.net/2025/03/23/vCh819PpVXuFWO6.png" alt="packaging-java-project-workflow-08.png" style="width:50%; height:50%;">
+<img src="https://s2.loli.net/2025/03/23/vCh819PpVXuFWO6.png" alt="packaging-java-project-workflow-08.png" style="width:100%; height:100%;">
 
 - #### 构建 .exe 文件
 
   点击“Build Wrapper”按钮，Launch4j 将生成 .exe 文件。如果构建过程中没有错误，你将会在指定的输出目录下看到生成的 .exe 文件。
 
-<img src="https://s2.loli.net/2025/03/23/3TY9hujQWvE8olV.png" alt="packaging-java-project-workflow-09.png" style="width:50%; height:50%;">
+<img src="https://s2.loli.net/2025/03/23/3TY9hujQWvE8olV.png" alt="packaging-java-project-workflow-09.png" style="width:100%; height:100%;">
 
 - #### 检查可执行程序是否能像在 `IDEA` 中一样正常运行，最好把所有功能都测试一遍，以防在前面使用 jlink 生成运行时镜像时少加了某些模块
 
-<img src="https://s2.loli.net/2025/03/23/lPVWNQ8ETyk5Dau.png" alt="packaging-java-project-workflow-10.png" style="width:50%; height:50%;">
+<img src="https://s2.loli.net/2025/03/23/lPVWNQ8ETyk5Dau.png" alt="packaging-java-project-workflow-10.png" style="width:100%; height:100%;">
 
 - #### 在这里可以将 `jre17` 文件夹删除，因为在 `jlink` 生成自定义运行时镜像时就已使用完毕，如果保留会导致下一步生成的安装程序包含多余的运行时文件
 
@@ -351,8 +166,8 @@ tags:
 
   打开 Inno Setup 后，选择“Create a new script file using the Script Wizard”（使用脚本向导创建新脚本）。
 
-<img src="https://s2.loli.net/2025/03/24/tfSZC6BrToIVi32.png" alt="packaging-java-project-workflow-11.png" style="width:50%; height:50%;">
-<img src="https://s2.loli.net/2025/03/24/WQzsjGEZBNwD1go.png" alt="packaging-java-project-workflow-12.png" style="width:50%; height:50%;">
+<img src="https://s2.loli.net/2025/03/24/tfSZC6BrToIVi32.png" alt="packaging-java-project-workflow-11.png" style="width:100%; height:100%;">
+<img src="https://s2.loli.net/2025/03/24/WQzsjGEZBNwD1go.png" alt="packaging-java-project-workflow-12.png" style="width:100%; height:100%;">
 
 ​	向导会一步步引导你设置安装程序的基本信息。
 
@@ -367,7 +182,7 @@ tags:
 
   点击“Next”继续。
 
-<img src="https://s2.loli.net/2025/03/24/WgiTowFA1tbJklK.png" alt="packaging-java-project-workflow-13.png" style="width:50%; height:50%;">
+<img src="https://s2.loli.net/2025/03/24/WgiTowFA1tbJklK.png" alt="packaging-java-project-workflow-13.png" style="width:100%; height:100%;">
 
 - #### Application Folder
 
@@ -380,7 +195,7 @@ tags:
 
   点击“Next”继续。
 
-<img src="https://s2.loli.net/2025/03/24/bE8YIgwXScTWkFr.png" alt="packaging-java-project-workflow-14.png" style="width:50%; height:50%;">
+<img src="https://s2.loli.net/2025/03/24/bE8YIgwXScTWkFr.png" alt="packaging-java-project-workflow-14.png" style="width:100%; height:100%;">
 
 - #### Application Files
 
@@ -393,7 +208,7 @@ tags:
 
   点击“Next”继续。
 
-<img src="https://s2.loli.net/2025/03/24/XL1AdN5xnWie4Ct.png" alt="packaging-java-project-workflow-15.png" style="width:50%; height:50%;">
+<img src="https://s2.loli.net/2025/03/24/XL1AdN5xnWie4Ct.png" alt="packaging-java-project-workflow-15.png" style="width:100%; height:100%;">
 
 - #### Application File Association
 
@@ -410,7 +225,7 @@ tags:
 
   点击“Next”继续。
 
-<img src="https://s2.loli.net/2025/03/24/hpgsIMtxEOnqdYQ.png" alt="packaging-java-project-workflow-16.png" style="width:50%; height:50%;">
+<img src="https://s2.loli.net/2025/03/24/hpgsIMtxEOnqdYQ.png" alt="packaging-java-project-workflow-16.png" style="width:100%; height:100%;">
 
 - #### Application Shortcuts
 
@@ -426,7 +241,7 @@ tags:
 
   点击“Next”继续。
 
-<img src="https://s2.loli.net/2025/03/24/oPA5lf2bD1CtdRF.png" alt="packaging-java-project-workflow-17.png" style="width:50%; height:50%;">
+<img src="https://s2.loli.net/2025/03/24/oPA5lf2bD1CtdRF.png" alt="packaging-java-project-workflow-17.png" style="width:100%; height:100%;">
 
 - #### Application Documentation
 
@@ -439,7 +254,7 @@ tags:
 
   点击“Next”继续。
 
-<img src="https://s2.loli.net/2025/03/24/d6Hmozx3Ffbwsjt.png" alt="packaging-java-project-workflow-18.png" style="width:50%; height:50%;">
+<img src="https://s2.loli.net/2025/03/24/d6Hmozx3Ffbwsjt.png" alt="packaging-java-project-workflow-18.png" style="width:100%; height:100%;">
 
 - #### Setup Install Mode
 
@@ -452,7 +267,7 @@ tags:
 
   点击“Next”继续。
 
-<img src="https://s2.loli.net/2025/03/24/rUCTNhYp3J4bQ2H.png" alt="packaging-java-project-workflow-19.png" style="width:50%; height:50%;">
+<img src="https://s2.loli.net/2025/03/24/rUCTNhYp3J4bQ2H.png" alt="packaging-java-project-workflow-19.png" style="width:100%; height:100%;">
 
 - #### Application Registry Keys And Values
 
@@ -463,7 +278,7 @@ tags:
 
   点击“Next”继续。
 
-<img src="https://s2.loli.net/2025/03/24/E3H8L5aq7tD2Nv4.png" alt="packaging-java-project-workflow-20.png" style="width:50%; height:50%;">
+<img src="https://s2.loli.net/2025/03/24/E3H8L5aq7tD2Nv4.png" alt="packaging-java-project-workflow-20.png" style="width:100%; height:100%;">
 
   - #### Setup Languages
 
@@ -475,7 +290,7 @@ tags:
 
     点击“Next”继续。
 
-<img src="https://s2.loli.net/2025/03/24/DNk3aw4BMtFi7mE.png" alt="packaging-java-project-workflow-21.png" style="width:50%; height:50%;">
+<img src="https://s2.loli.net/2025/03/24/DNk3aw4BMtFi7mE.png" alt="packaging-java-project-workflow-21.png" style="width:100%; height:100%;">
 
 - #### Compiler Settings
 
@@ -495,7 +310,7 @@ tags:
 
   点击“Next”继续。
 
-<img src="https://s2.loli.net/2025/03/24/NUEW129pTbBRrmk.png" alt="packaging-java-project-workflow-22.png" style="width:50%; height:50%;">
+<img src="https://s2.loli.net/2025/03/24/NUEW129pTbBRrmk.png" alt="packaging-java-project-workflow-22.png" style="width:100%; height:100%;">
 
 - #### Inno Setup Preprocessor
 
@@ -508,7 +323,7 @@ tags:
 
   点击“Next”继续。
 
-<img src="https://s2.loli.net/2025/03/24/QaeMrXY8CSwUov6.png" alt="packaging-java-project-workflow-23.png" style="width:50%; height:50%;">
+<img src="https://s2.loli.net/2025/03/24/QaeMrXY8CSwUov6.png" alt="packaging-java-project-workflow-23.png" style="width:100%; height:100%;">
 
 - #### 当向导执行到最后一步，会显示“**You have successfully completed the Inno Setup Script Wizard**”
 
@@ -518,7 +333,7 @@ tags:
 
   如需编译，点击“**Compile**”或使用菜单栏中的相应选项进行打包。
 
-<img src="https://s2.loli.net/2025/03/24/gP9bHJvCWMFLDU8.png" alt="packaging-java-project-workflow-24.png" style="width:50%; height:50%;">
+<img src="https://s2.loli.net/2025/03/24/gP9bHJvCWMFLDU8.png" alt="packaging-java-project-workflow-24.png" style="width:100%; height:100%;">
 
 - #### Would you like to compile the new script now?
 
@@ -529,7 +344,7 @@ tags:
   - 也可以选择“**取消**”以中断当前操作。
   - 这里建议选择“**是(Y)**”。
 
-<img src="https://s2.loli.net/2025/03/24/cpWvk8C6OM5jQfs.png" alt="packaging-java-project-workflow-25.png" style="width:50%; height:50%;">
+<img src="https://s2.loli.net/2025/03/24/cpWvk8C6OM5jQfs.png" alt="packaging-java-project-workflow-25.png" style="width:100%; height:100%;">
 
 - #### Would you like to save the script before compiling?
 
@@ -541,7 +356,7 @@ tags:
 
   建议在编译前先保存脚本，便于后续维护和修改。
 
-<img src="https://s2.loli.net/2025/03/24/K6BI5ngb2dkiMt1.png" alt="packaging-java-project-workflow-26.png" style="width:50%; height:50%;">
+<img src="https://s2.loli.net/2025/03/24/K6BI5ngb2dkiMt1.png" alt="packaging-java-project-workflow-26.png" style="width:100%; height:100%;">
 
 - #### 选择“是(Y)”之后，会弹出另存为对话框
 
@@ -551,7 +366,7 @@ tags:
   - 确认“**保存类型(T)**”为 “Inno Setup Script files (*.iss)”。
   - 选择合适的保存位置（如项目的 `output` 文件夹），然后点击“**保存(S)**”。
 
-<img src="https://s2.loli.net/2025/03/24/C6BJHdOUrZmyxuA.png" alt="packaging-java-project-workflow-27.png" style="width:50%; height:50%;">
+<img src="https://s2.loli.net/2025/03/24/C6BJHdOUrZmyxuA.png" alt="packaging-java-project-workflow-27.png" style="width:100%; height:100%;">
 
 - #### 保存成功后，会自动返回编译界面进行后续操作。
 
@@ -563,11 +378,11 @@ tags:
 
   编译结束后，生成的安装程序可在脚本中指定的 `OutputDir` 文件夹中找到。
 
-<img src="https://s2.loli.net/2025/03/24/LYv9DwXWe3nxuOS.png" alt="packaging-java-project-workflow-28.png" style="width:50%; height:50%;">
+<img src="https://s2.loli.net/2025/03/24/LYv9DwXWe3nxuOS.png" alt="packaging-java-project-workflow-28.png" style="width:100%; height:100%;">
 
 - #### 生成后，可以在一个干净的环境下（或者模拟没有预装 Java 的环境）测试安装，确认安装目录中包含你的所有文件，并且双击启动 EXE 能够正确运行。
 
-<img src="https://s2.loli.net/2025/03/24/MsOInKPJqUzSgiw.png" alt="packaging-java-project-workflow-29.png" style="width:50%; height:50%;">
+<img src="https://s2.loli.net/2025/03/24/MsOInKPJqUzSgiw.png" alt="packaging-java-project-workflow-29.png" style="width:100%; height:100%;">
 
 ---
 
