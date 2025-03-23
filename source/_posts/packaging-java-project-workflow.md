@@ -1,6 +1,6 @@
 ---
 title: 打包Java项目过程
-date: 2025-03-24 02:35:45
+date: 2025-03-24 10:35:45
 tags:
 ---
 
@@ -166,8 +166,8 @@ tags:
 
   打开 Inno Setup 后，选择“Create a new script file using the Script Wizard”（使用脚本向导创建新脚本）。
 
-<img src="https://s2.loli.net/2025/03/24/tfSZC6BrToIVi32.png" alt="packaging-java-project-workflow-11.png" style="width:100%; height:100%;">
-<img src="https://s2.loli.net/2025/03/24/WQzsjGEZBNwD1go.png" alt="packaging-java-project-workflow-12.png" style="width:100%; height:100%;">
+<img src="https://s2.loli.net/2025/03/24/tfSZC6BrToIVi32.png" alt="packaging-java-project-workflow-11.png" style="width:80%; height:80%;">
+<img src="https://s2.loli.net/2025/03/24/WQzsjGEZBNwD1go.png" alt="packaging-java-project-workflow-12.png" style="width:80%; height:80%;">
 
 ​	向导会一步步引导你设置安装程序的基本信息。
 
@@ -182,7 +182,7 @@ tags:
 
   点击“Next”继续。
 
-<img src="https://s2.loli.net/2025/03/24/WgiTowFA1tbJklK.png" alt="packaging-java-project-workflow-13.png" style="width:100%; height:100%;">
+<img src="https://s2.loli.net/2025/03/24/WgiTowFA1tbJklK.png" alt="packaging-java-project-workflow-13.png" style="width:80%; height:80%;">
 
 - #### Application Folder
 
@@ -195,7 +195,7 @@ tags:
 
   点击“Next”继续。
 
-<img src="https://s2.loli.net/2025/03/24/bE8YIgwXScTWkFr.png" alt="packaging-java-project-workflow-14.png" style="width:100%; height:100%;">
+<img src="https://s2.loli.net/2025/03/24/bE8YIgwXScTWkFr.png" alt="packaging-java-project-workflow-14.png" style="width:80%; height:80%;">
 
 - #### Application Files
 
@@ -208,7 +208,7 @@ tags:
 
   点击“Next”继续。
 
-<img src="https://s2.loli.net/2025/03/24/XL1AdN5xnWie4Ct.png" alt="packaging-java-project-workflow-15.png" style="width:100%; height:100%;">
+<img src="https://s2.loli.net/2025/03/24/XL1AdN5xnWie4Ct.png" alt="packaging-java-project-workflow-15.png" style="width:80%; height:80%;">
 
 - #### Application File Association
 
@@ -225,7 +225,7 @@ tags:
 
   点击“Next”继续。
 
-<img src="https://s2.loli.net/2025/03/24/hpgsIMtxEOnqdYQ.png" alt="packaging-java-project-workflow-16.png" style="width:100%; height:100%;">
+<img src="https://s2.loli.net/2025/03/24/hpgsIMtxEOnqdYQ.png" alt="packaging-java-project-workflow-16.png" style="width:80%; height:80%;">
 
 - #### Application Shortcuts
 
@@ -241,7 +241,7 @@ tags:
 
   点击“Next”继续。
 
-<img src="https://s2.loli.net/2025/03/24/oPA5lf2bD1CtdRF.png" alt="packaging-java-project-workflow-17.png" style="width:100%; height:100%;">
+<img src="https://s2.loli.net/2025/03/24/oPA5lf2bD1CtdRF.png" alt="packaging-java-project-workflow-17.png" style="width:80%; height:80%;">
 
 - #### Application Documentation
 
@@ -254,7 +254,7 @@ tags:
 
   点击“Next”继续。
 
-<img src="https://s2.loli.net/2025/03/24/d6Hmozx3Ffbwsjt.png" alt="packaging-java-project-workflow-18.png" style="width:100%; height:100%;">
+<img src="https://s2.loli.net/2025/03/24/d6Hmozx3Ffbwsjt.png" alt="packaging-java-project-workflow-18.png" style="width:80%; height:80%;">
 
 - #### Setup Install Mode
 
@@ -267,7 +267,7 @@ tags:
 
   点击“Next”继续。
 
-<img src="https://s2.loli.net/2025/03/24/rUCTNhYp3J4bQ2H.png" alt="packaging-java-project-workflow-19.png" style="width:100%; height:100%;">
+<img src="https://s2.loli.net/2025/03/24/rUCTNhYp3J4bQ2H.png" alt="packaging-java-project-workflow-19.png" style="width:80%; height:80%;">
 
 - #### Application Registry Keys And Values
 
@@ -278,7 +278,7 @@ tags:
 
   点击“Next”继续。
 
-<img src="https://s2.loli.net/2025/03/24/E3H8L5aq7tD2Nv4.png" alt="packaging-java-project-workflow-20.png" style="width:100%; height:100%;">
+<img src="https://s2.loli.net/2025/03/24/E3H8L5aq7tD2Nv4.png" alt="packaging-java-project-workflow-20.png" style="width:80%; height:80%;">
 
   - #### Setup Languages
 
@@ -290,7 +290,7 @@ tags:
 
     点击“Next”继续。
 
-<img src="https://s2.loli.net/2025/03/24/DNk3aw4BMtFi7mE.png" alt="packaging-java-project-workflow-21.png" style="width:100%; height:100%;">
+<img src="https://s2.loli.net/2025/03/24/DNk3aw4BMtFi7mE.png" alt="packaging-java-project-workflow-21.png" style="width:80%; height:80%;">
 
 - #### Compiler Settings
 
@@ -310,7 +310,7 @@ tags:
 
   点击“Next”继续。
 
-<img src="https://s2.loli.net/2025/03/24/NUEW129pTbBRrmk.png" alt="packaging-java-project-workflow-22.png" style="width:100%; height:100%;">
+<img src="https://s2.loli.net/2025/03/24/NUEW129pTbBRrmk.png" alt="packaging-java-project-workflow-22.png" style="width:80%; height:80%;">
 
 - #### Inno Setup Preprocessor
 
@@ -323,7 +323,7 @@ tags:
 
   点击“Next”继续。
 
-<img src="https://s2.loli.net/2025/03/24/QaeMrXY8CSwUov6.png" alt="packaging-java-project-workflow-23.png" style="width:100%; height:100%;">
+<img src="https://s2.loli.net/2025/03/24/QaeMrXY8CSwUov6.png" alt="packaging-java-project-workflow-23.png" style="width:80%; height:80%;">
 
 - #### 当向导执行到最后一步，会显示“**You have successfully completed the Inno Setup Script Wizard**”
 
@@ -333,7 +333,7 @@ tags:
 
   如需编译，点击“**Compile**”或使用菜单栏中的相应选项进行打包。
 
-<img src="https://s2.loli.net/2025/03/24/gP9bHJvCWMFLDU8.png" alt="packaging-java-project-workflow-24.png" style="width:100%; height:100%;">
+<img src="https://s2.loli.net/2025/03/24/gP9bHJvCWMFLDU8.png" alt="packaging-java-project-workflow-24.png" style="width:80%; height:80%;">
 
 - #### Would you like to compile the new script now?
 
