@@ -1,6 +1,6 @@
 ---
 title: 打包Java项目过程
-date: 2025-03-24 10:35:45
+date: 2025-03-24 02:35:45
 tags:
 ---
 
@@ -219,10 +219,6 @@ tags:
     - **Application file type name**：如 *Outbound Management File*
     - **Application file type extension**：如 `.myp`
 
-  然后在脚本中进一步添加 `[Registry]` 或 `[Tasks]` 配置来实现更完整的文件关联逻辑。
-
-  > 但就你提供的脚本而言，当前并没有相关条目，因此一般建议**留空或取消勾选**。
-
   点击“Next”继续。
 
 <img src="https://s2.loli.net/2025/03/24/hpgsIMtxEOnqdYQ.png" alt="packaging-java-project-workflow-16.png" style="width:80%; height:80%;">
@@ -288,19 +284,18 @@ tags:
       - 若要支持中文，请勾选 “Chinese (Simplified)” 或 “Chinese (Traditional)”（Inno Setup 默认可能未内置中文，需要额外放置语言文件或在安装时勾选）。
       - 其他语言可按需要自行勾选或保留默认。
 
-    点击“Next”继续。
+      点击“Next”继续。
+
 
 <img src="https://s2.loli.net/2025/03/24/DNk3aw4BMtFi7mE.png" alt="packaging-java-project-workflow-21.png" style="width:80%; height:80%;">
 
 - #### Compiler Settings
 
-  与脚本中 `[Setup]` 段落对应的配置：
+    - **Custom compiler output folder**：对应 OutputDir=Output
 
-    - **Custom compiler output folder**：对应 `OutputDir=Output`
+      > 即最终生成的安装包的文件夹路径，这里可填写 `.\Output` 或直接 `Output`，确保和脚本中一致。
 
-      > 这里可填写 `.\Output` 或直接 `Output`，确保和脚本中一致。
-
-    - **Compiler output base file name**：对应 `OutputBaseFilename=OutboundManagementSetup`
+    - **Compiler output base file name**：对应 OutputBaseFilename=OutboundManagementSetup
 
       > 即最终生成的安装包名称为 `OutboundManagementSetup.exe`。
 
@@ -331,7 +326,6 @@ tags:
 
   退出后，可在 Inno Setup Compiler 中查看或修改生成的脚本。
 
-  如需编译，点击“**Compile**”或使用菜单栏中的相应选项进行打包。
 
 <img src="https://s2.loli.net/2025/03/24/gP9bHJvCWMFLDU8.png" alt="packaging-java-project-workflow-24.png" style="width:80%; height:80%;">
 
@@ -342,7 +336,8 @@ tags:
   - 如果选择“**是(Y)**”，则会直接开始编译，生成安装程序。
   - 如果选择“**否(N)**”，则暂不编译，可稍后再手动执行编译操作。
   - 也可以选择“**取消**”以中断当前操作。
-  - 这里建议选择“**是(Y)**”。
+
+  这里建议选择“**是(Y)**”。
 
 <img src="https://s2.loli.net/2025/03/24/cpWvk8C6OM5jQfs.png" alt="packaging-java-project-workflow-25.png" style="width:100%; height:100%;">
 
