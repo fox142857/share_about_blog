@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>开发属于自己的Hexo主题 | Share about building blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="思路：来到自己的博客，安装脚手架和更新依赖12npm install -g hexo-clinpm install  创建一个新的主题文件夹123cd themesmkdir my-themecd my-theme  创建主题结构123456789101112my-theme&#x2F;├── layout&#x2F;│   ├── _partial&#x2F;│   ├── index.ejs│   ├── post.ejs">
+<meta property="og:type" content="article">
+<meta property="og:title" content="开发属于自己的Hexo主题">
+<meta property="og:url" content="https://fox142857.github.io/share_about_blog/2035/11/09/%E5%BC%80%E5%8F%91%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84Hexo%E4%B8%BB%E9%A2%98/index.html">
+<meta property="og:site_name" content="Share about building blog">
+<meta property="og:description" content="思路：来到自己的博客，安装脚手架和更新依赖12npm install -g hexo-clinpm install  创建一个新的主题文件夹123cd themesmkdir my-themecd my-theme  创建主题结构123456789101112my-theme&#x2F;├── layout&#x2F;│   ├── _partial&#x2F;│   ├── index.ejs│   ├── post.ejs">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2035-11-09T16:35:45.000Z">
+<meta property="article:modified_time" content="2025-03-23T19:14:49.807Z">
+<meta property="article:author" content="栀子花">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/share_about_blog/atom.xml" title="Share about building blog" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/share_about_blog/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/share_about_blog/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/share_about_blog/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/share_about_blog/" id="logo">Share about building blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/share_about_blog/" id="subtitle">分享我搭建个人博客网站的过程</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/share_about_blog/">Home</a>
+        
+          <a class="main-nav-link" href="/share_about_blog/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/share_about_blog/atom.xml" title="RSS 订阅"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="搜索"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://fox142857.github.io/share_about_blog"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-开发属于自己的Hexo主题" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/share_about_blog/2035/11/09/%E5%BC%80%E5%8F%91%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84Hexo%E4%B8%BB%E9%A2%98/" class="article-date">
+  <time class="dt-published" datetime="2035-11-09T16:35:45.000Z" itemprop="datePublished">2035-11-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      开发属于自己的Hexo主题
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h1><h2 id="来到自己的博客，安装脚手架和更新依赖"><a href="#来到自己的博客，安装脚手架和更新依赖" class="headerlink" title="来到自己的博客，安装脚手架和更新依赖"></a>来到自己的博客，安装脚手架和更新依赖</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+
+<h2 id="创建一个新的主题文件夹"><a href="#创建一个新的主题文件夹" class="headerlink" title="创建一个新的主题文件夹"></a>创建一个新的主题文件夹</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> themes</span><br><span class="line"><span class="built_in">mkdir</span> my-theme</span><br><span class="line"><span class="built_in">cd</span> my-theme</span><br></pre></td></tr></table></figure>
+
+<h2 id="创建主题结构"><a href="#创建主题结构" class="headerlink" title="创建主题结构"></a>创建主题结构</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">my-theme/</span><br><span class="line">├── layout/</span><br><span class="line">│   ├── _partial/</span><br><span class="line">│   ├── index.ejs</span><br><span class="line">│   ├── post.ejs</span><br><span class="line">│   └── ... (其他布局文件)</span><br><span class="line">├── source/</span><br><span class="line">│   ├── css/</span><br><span class="line">│   ├── js/</span><br><span class="line">│   └── images/</span><br><span class="line">├── _config.yml</span><br><span class="line">└── package.json</span><br></pre></td></tr></table></figure>
+
+<h2 id="编辑主题的-config-yml"><a href="#编辑主题的-config-yml" class="headerlink" title="编辑主题的 _config.yml"></a>编辑主题的 _config.yml</h2><h3 id="在-my-theme-文件夹中创建-config-yml-文件"><a href="#在-my-theme-文件夹中创建-config-yml-文件" class="headerlink" title="在 my-theme 文件夹中创建 _config.yml 文件"></a>在 my-theme 文件夹中创建 _config.yml 文件</h3><h3 id="这个文件用于配置主题设置，例如："><a href="#这个文件用于配置主题设置，例如：" class="headerlink" title="这个文件用于配置主题设置，例如："></a>这个文件用于配置主题设置，例如：</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">name:</span> <span class="string">my-theme</span></span><br><span class="line"><span class="attr">version:</span> <span class="number">1.0</span><span class="number">.0</span></span><br><span class="line"><span class="attr">description:</span> <span class="string">A</span> <span class="string">custom</span> <span class="string">theme</span> <span class="string">for</span> <span class="string">Hexo</span></span><br><span class="line"><span class="attr">author:</span> <span class="string">Your</span> <span class="string">Name</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="编辑主题的-package-json"><a href="#编辑主题的-package-json" class="headerlink" title="编辑主题的 package.json"></a>编辑主题的 package.json</h2><h3 id="在-my-theme-文件夹中创建-package-json-文件，用于管理主题的依赖关系："><a href="#在-my-theme-文件夹中创建-package-json-文件，用于管理主题的依赖关系：" class="headerlink" title="在 my-theme 文件夹中创建 package.json 文件，用于管理主题的依赖关系："></a>在 my-theme 文件夹中创建 package.json 文件，用于管理主题的依赖关系：</h3><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;my-theme&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;version&quot;</span><span class="punctuation">:</span> <span class="string">&quot;1.0.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;description&quot;</span><span class="punctuation">:</span> <span class="string">&quot;A custom theme for Hexo&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;main&quot;</span><span class="punctuation">:</span> <span class="string">&quot;index.js&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;dependencies&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span><span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="创建布局文件"><a href="#创建布局文件" class="headerlink" title="创建布局文件"></a>创建布局文件</h2><h3 id="在-layout-文件夹中创建基本的布局文件，例如-index-ejs-和-post-ejs，这些文件定义了首页和文章页面的结构。"><a href="#在-layout-文件夹中创建基本的布局文件，例如-index-ejs-和-post-ejs，这些文件定义了首页和文章页面的结构。" class="headerlink" title="在 layout 文件夹中创建基本的布局文件，例如 index.ejs 和 post.ejs，这些文件定义了首页和文章页面的结构。"></a>在 layout 文件夹中创建基本的布局文件，例如 index.ejs 和 post.ejs，这些文件定义了首页和文章页面的结构。</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>&lt;%= config.title %&gt;<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;&lt;%= url_for(&#x27;css/style.css&#x27;) %&gt;&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">header</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h1</span>&gt;</span>&lt;%= config.title %&gt;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">header</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">main</span>&gt;</span></span><br><span class="line">        &lt;%- partial(&#x27;_partial/posts.ejs&#x27;) %&gt;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">main</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">footer</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>© &lt;%= new Date().getFullYear() %&gt; Your Name<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">footer</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="自定义-CSS-和-JS"><a href="#自定义-CSS-和-JS" class="headerlink" title="自定义 CSS 和 JS"></a>自定义 CSS 和 JS</h2><h3 id="在-source-css-和-source-js-文件夹中添加自定义样式和脚本文件。例如，可以创建-style-css-文件并添加一些基本样式："><a href="#在-source-css-和-source-js-文件夹中添加自定义样式和脚本文件。例如，可以创建-style-css-文件并添加一些基本样式：" class="headerlink" title="在 source&#x2F;css 和 source&#x2F;js 文件夹中添加自定义样式和脚本文件。例如，可以创建 style.css 文件并添加一些基本样式："></a>在 source&#x2F;css 和 source&#x2F;js 文件夹中添加自定义样式和脚本文件。例如，可以创建 style.css 文件并添加一些基本样式：</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>: Arial, sans-serif;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">header</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#4CAF50</span>;</span><br><span class="line">    <span class="attribute">color</span>: white;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">text-align</span>: center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="更新-Hexo-配置文件"><a href="#更新-Hexo-配置文件" class="headerlink" title="更新 Hexo 配置文件"></a>更新 Hexo 配置文件</h2><h3 id="在-Hexo-根目录下的-config-yml-文件中，将主题设置为自己创建的主题："><a href="#在-Hexo-根目录下的-config-yml-文件中，将主题设置为自己创建的主题：" class="headerlink" title="在 Hexo 根目录下的 _config.yml 文件中，将主题设置为自己创建的主题："></a>在 Hexo 根目录下的 _config.yml 文件中，将主题设置为自己创建的主题：</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">theme:</span> <span class="string">my-theme</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="运行-Hexo"><a href="#运行-Hexo" class="headerlink" title="运行 Hexo"></a>运行 Hexo</h2><h3 id="回到-Hexo-根目录，运行以下命令生成和启动博客："><a href="#回到-Hexo-根目录，运行以下命令生成和启动博客：" class="headerlink" title="回到 Hexo 根目录，运行以下命令生成和启动博客："></a>回到 Hexo 根目录，运行以下命令生成和启动博客：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://fox142857.github.io/share_about_blog/2035/11/09/%E5%BC%80%E5%8F%91%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84Hexo%E4%B8%BB%E9%A2%98/" data-id="cm8m0pejy0002idq8ftm4cd75" data-title="开发属于自己的Hexo主题" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/share_about_blog/2035/11/09/%E8%87%AA%E7%94%A8%E5%AF%BC%E8%88%AA/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前一篇</strong>
+      <div class="article-nav-title">
+        
+          自用导航
+        
+      </div>
+    </a>
+  
+  
+    <a href="/share_about_blog/2035/11/09/%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">后一篇</strong>
+      <div class="article-nav-title">快速搭建</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/share_about_blog/archives/2035/11/">十一月 2035</a></li><li class="archive-list-item"><a class="archive-list-link" href="/share_about_blog/archives/2025/03/">三月 2025</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/share_about_blog/2035/11/09/%E5%88%86%E4%BA%AB%E6%88%91%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E7%9A%84%E8%BF%87%E7%A8%8B/">分享我搭建个人博客网站的过程</a>
+          </li>
+        
+          <li>
+            <a href="/share_about_blog/2035/11/09/%E8%87%AA%E7%94%A8%E5%AF%BC%E8%88%AA/">自用导航</a>
+          </li>
+        
+          <li>
+            <a href="/share_about_blog/2035/11/09/%E5%BC%80%E5%8F%91%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84Hexo%E4%B8%BB%E9%A2%98/">开发属于自己的Hexo主题</a>
+          </li>
+        
+          <li>
+            <a href="/share_about_blog/2035/11/09/%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA/">快速搭建</a>
+          </li>
+        
+          <li>
+            <a href="/share_about_blog/2025/03/24/packaging-java-project-workflow/">打包Java项目过程</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2025 栀子花<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/share_about_blog/" class="mobile-nav-link">Home</a>
+  
+    <a href="/share_about_blog/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/share_about_blog/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/share_about_blog/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/share_about_blog/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
